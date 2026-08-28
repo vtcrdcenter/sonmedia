@@ -1,23 +1,2 @@
-const dialogs = {
-  video: document.querySelector('#video-dialog'),
-  booking: document.querySelector('#booking-dialog')
-};
-
-document.querySelectorAll('[data-dialog]').forEach((trigger) => {
-  trigger.addEventListener('click', () => dialogs[trigger.dataset.dialog]?.showModal());
-});
-
-document.querySelectorAll('.son-dialog').forEach((dialog) => {
-  dialog.querySelector('.dialog-close').addEventListener('click', () => dialog.close());
-  dialog.addEventListener('click', (event) => {
-    const rect = dialog.getBoundingClientRect();
-    const outside = event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom;
-    if (outside) dialog.close();
-  });
-});
-
-document.querySelector('#booking-form').addEventListener('submit', (event) => {
-  event.preventDefault();
-  event.currentTarget.hidden = true;
-  document.querySelector('.form-success').hidden = false;
-});
+const menuButton=document.querySelector('.menu-toggle');const menu=document.querySelector('.main-nav');menuButton.addEventListener('click',()=>{const open=menu.classList.toggle('open');menuButton.setAttribute('aria-expanded',String(open))});menu.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{menu.classList.remove('open');menuButton.setAttribute('aria-expanded','false')}));
+const dialogs={video:document.querySelector('#video-dialog'),booking:document.querySelector('#booking-dialog')};document.querySelectorAll('[data-open]').forEach(button=>button.addEventListener('click',()=>dialogs[button.dataset.open].showModal()));document.querySelectorAll('dialog').forEach(dialog=>{dialog.querySelector('.dialog-close').addEventListener('click',()=>dialog.close());dialog.addEventListener('click',event=>{const box=dialog.getBoundingClientRect();if(event.clientX<box.left||event.clientX>box.right||event.clientY<box.top||event.clientY>box.bottom)dialog.close()})});document.querySelector('#booking-dialog form').addEventListener('submit',event=>{event.preventDefault();event.currentTarget.hidden=true;document.querySelector('#booking-dialog .success').hidden=false});
