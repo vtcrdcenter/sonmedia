@@ -4,10 +4,10 @@
   transform-origin:top center!important;
 }
 .light-bank.right{transform:rotate(180deg) scaleY(-1)!important}
-.light-orb{filter:brightness(1.25) saturate(1.2);animation:ledFlash .24s steps(2,end) infinite alternate!important}
+.light-orb{filter:brightness(1.25) saturate(1.2);animation:ledFlash .14s linear infinite alternate!important}
 .orb-1{animation-delay:-.08s!important}.orb-2{animation-delay:-.33s!important}.orb-3{animation-delay:-.19s!important}.orb-4{animation-delay:-.47s!important}
-.beam-1{animation:stageSweepA .48s ease-in-out infinite alternate!important}.beam-2{animation:stageSweepB .36s ease-in-out -.12s infinite alternate!important}.beam-3{animation:stageSweepC .55s ease-in-out -.26s infinite alternate!important}
-.beam-4{left:575px;top:34px;width:300px;height:636px;animation:stageSweepD .4s ease-in-out -.08s infinite alternate!important}
+.beam-1{animation:stageSweepA .24s linear infinite alternate!important}.beam-2{animation:stageSweepB .18s linear -.06s infinite alternate!important}.beam-3{animation:stageSweepC .28s linear -.13s infinite alternate!important}
+.beam-4{left:575px;top:34px;width:300px;height:636px;animation:stageSweepD .2s linear -.04s infinite alternate!important}
 .beam-4 img{width:87px;height:671px;max-width:none;object-fit:cover;transform:rotate(20deg);opacity:.32}
 @keyframes ledFlash{0%{opacity:.3;filter:brightness(.8) saturate(1)}45%{opacity:.65;filter:brightness(1.25) saturate(1.2)}100%{opacity:1;filter:brightness(1.75) saturate(1.4) drop-shadow(0 0 12px rgba(255,116,51,.7))}}
 @keyframes stageSweepA{to{transform:rotate(-7deg) translateX(18px)}}@keyframes stageSweepB{to{transform:rotate(6deg) translateX(-14px)}}@keyframes stageSweepC{to{transform:rotate(-5deg) translateX(20px)}}@keyframes stageSweepD{to{transform:rotate(8deg) translateX(-16px)}}
