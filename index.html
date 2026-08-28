@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SON Media – Nghệ thuật, ngôn ngữ lan tỏa giá trị">
+  <title>SON Media</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <main class="figma-page" aria-label="Trang chủ SON Media">
+    <img class="figma-export" src="assets/figma/home/export.png" alt="Trang chủ SON Media">
+
+    <nav class="hotspots" aria-label="Điều hướng nhanh">
+      <a class="hotspot nav-home" href="#top" aria-label="Trang chủ"></a>
+      <a class="hotspot nav-about" href="#about" aria-label="Về chúng tôi"></a>
+      <a class="hotspot nav-programs" href="#programs" aria-label="Sản phẩm nghệ thuật"></a>
+      <a class="hotspot nav-news" href="#news" aria-label="Tin tức"></a>
+      <a class="hotspot nav-contact" href="#contact" aria-label="Liên hệ"></a>
+    </nav>
+
+    <span id="top" class="anchor anchor-top"></span>
+    <span id="about" class="anchor anchor-about"></span>
+    <span id="programs" class="anchor anchor-programs"></span>
+    <span id="news" class="anchor anchor-news"></span>
+    <span id="contact" class="anchor anchor-contact"></span>
+
+    <button class="hotspot hero-book" type="button" data-dialog="booking" aria-label="Đặt vé ngay"></button>
+    <button class="hotspot hero-watch" type="button" data-dialog="video" aria-label="Xem chương trình"></button>
+    <button class="hotspot video-play" type="button" data-dialog="video" aria-label="Phát video giới thiệu"></button>
+
+    <div class="event-actions" aria-label="Đặt vé các chương trình">
+      <button type="button" data-dialog="booking" aria-label="Đặt vé Giấc mơ tuổi thần tiên"></button>
+      <button type="button" data-dialog="booking" aria-label="Đặt vé Lời nguyền của bà tiên"></button>
+      <button type="button" data-dialog="booking" aria-label="Đặt vé Biển đảo là quê hương"></button>
+      <button type="button" data-dialog="booking" aria-label="Đặt vé Ngựa du xuân 3 miền"></button>
+    </div>
+  </main>
+
+  <dialog id="video-dialog" class="son-dialog">
+    <button class="dialog-close" type="button" aria-label="Đóng">×</button>
+    <p class="eyebrow">SONMEDIA · CẢM XÚC · SÂN KHẤU</p>
+    <h2>Hội diễn dân hát dân ca 3 miền 2026</h2>
+    <p>Nội dung video sẽ được cập nhật.</p>
+  </dialog>
+
+  <dialog id="booking-dialog" class="son-dialog">
+    <button class="dialog-close" type="button" aria-label="Đóng">×</button>
+    <p class="eyebrow">SON MEDIA</p>
+    <h2>Đăng ký đặt vé</h2>
+    <form id="booking-form">
+      <label>Họ và tên<input name="name" autocomplete="name" required></label>
+      <label>Số điện thoại<input name="phone" inputmode="tel" autocomplete="tel" required></label>
+      <button class="submit-button" type="submit">Gửi đăng ký</button>
+    </form>
+    <p class="form-success" hidden>Cảm ơn bạn. SON Media sẽ liên hệ sớm!</p>
+  </dialog>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
